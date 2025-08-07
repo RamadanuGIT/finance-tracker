@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Finance Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Personal Finance Tracker</h1>
+
+        <form id="transaction-form">
+            <input type="text" id="name" placeholder="Nama Transaksi" required>
+            <input type="number" id="amount" placeholder="Jumlah (Rp)" required>
+            <select id="type">
+                <option value="income">pemasukan</option>
+                <option value="expense">Pengeluaran</option>
+            </select>
+            <button type="submit">Tambah Transaksi</button>
+        </form>
+
+        <div class="summary">
+            <h1>Ringkasan</h1>
+            <p>Saldo: <span id="balance">Rp 0</span></p>
+            <p>Pemasukan: <span id="total-income">Rp 0</span></p>
+            <p>Pengeluaran: <span id="total-expense">Rp 0</span></p>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Nama</th>
+                    <th>Jumlah</th>
+                    <th>Jenis</th>
+                    <th>Aksi</th>
+                </tr>
+            </thead>
+            <tbody id="transaction-list">
+                <!-- transasi akan ditampilkan di sini -->
+            </tbody>
+        </table>
+    </div>
+
+<script src="script.js"></script>
+</body>
+</html>
